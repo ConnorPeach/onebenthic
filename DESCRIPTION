@@ -1,0 +1,16 @@
+Package: onebenthic
+Type: Package
+Title: Access the OneBenthic Database
+Version: 0.0.0.9000
+Authors@R: 
+    person("Connor", "Peach", , "cmpeach1@sheffield.ac.uk", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0005-4969-6429"))
+Description: Query the OneBenthic Database, with this package providing access to all publically accessible OneBenthic data via multiple API endpoints.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    dplyr,
+    httr,
+    jsonlite
