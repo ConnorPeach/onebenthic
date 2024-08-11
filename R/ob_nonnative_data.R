@@ -16,6 +16,6 @@ ob_nonnative_data <- function(year) {
   stopifnot("Input must be numeric" = is.numeric(year))
   data = GET("https://rconnect.cefas.co.uk/onebenthic_api_7/API-7?",
              query = list(in_year = year))
-  nonnative_data <- content(data, "text")%>%fromJSON
+  nonnative_data <- content(data, "text", encoding = "UTF-8") %>% fromJSON
   glimpse(nonnative_data)
 }

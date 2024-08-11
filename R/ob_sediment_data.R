@@ -16,6 +16,6 @@ ob_sediment_data <- function(year) {
   stopifnot("Input must be numeric" = is.numeric(year))
   data = GET("https://rconnect.cefas.co.uk/onebenthic_api_3/API-3?",
              query = list(in_year = year))
-  sediment_data <- content(data, "text")%>%fromJSON
+  sediment_data <- content(data, "text", encoding = "UTF-8") %>% fromJSON
   glimpse(sediment_data)
 }

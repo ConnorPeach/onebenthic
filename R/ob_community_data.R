@@ -18,6 +18,6 @@ ob_community_data <- function(year, sieve_size) {
   stopifnot("Input must be numeric" = is.numeric(sieve_size))
   data = GET("https://rconnect.cefas.co.uk/onebenthic_api_1/API-1_with_filters?",
              query = list(in_year = year, in_sieve_size_mm = sieve_size))
-  community_data <- content(data, "text")%>%fromJSON
+  community_data <- content(data, "text", encoding = "UTF-8") %>% fromJSON
   glimpse(community_data)
 }
