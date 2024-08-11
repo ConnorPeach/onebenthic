@@ -1,7 +1,7 @@
 Package: onebenthic
 Type: Package
 Title: Access the OneBenthic Database
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person("Connor", "Peach", , "cmpeach1@sheffield.ac.uk", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0005-4969-6429"))

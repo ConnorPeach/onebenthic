@@ -1,5 +1,5 @@
 ---
-title: "Introduction to onebenthic"
+title: "The onebenthic package"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to onebenthic}
@@ -14,21 +14,24 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(onebenthic)
-library(dplyr)
-```
-
-## An introduction to the onebenthic R package.
+## An introduction to the onebenthic package
 
 This package enables users to access the OneBenthic dataset using the multiple APIs provided in the OneBenthic portal.
 
-The OneBenthic database can be found here: ttps://rconnect.cefas.co.uk/onebenthic_portal/
+\
+
+The OneBenthic database can be found here: https://rconnect.cefas.co.uk/onebenthic_portal/
+
+## Examples of using the package
+
+Loading the package into R:
+
+```{r setup}
+library(onebenthic)
+```
 
 An example of accessing the OneBenthic database, using the first API for benthic community data:
 
 ```{r}
 ob_api_1 <- ob_community_data(year = 2000, sieve_size = 1)
-
-glimpse(ob_api_1)
 ```
