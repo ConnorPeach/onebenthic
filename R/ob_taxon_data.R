@@ -17,5 +17,5 @@ ob_taxon_data <- function(aphiaid) {
   data = GET("https://rconnect.cefas.co.uk/onebenthic_api_2/API-2?",
              query = list(in_valid_aphiaid = aphiaid))
   taxon_data <- content(data, "text")%>%fromJSON
-  str(taxon_data)
+  glimpse(taxon_data)
 }

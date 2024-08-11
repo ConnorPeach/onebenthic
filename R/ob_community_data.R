@@ -19,5 +19,5 @@ ob_community_data <- function(year, sieve_size) {
   data = GET("https://rconnect.cefas.co.uk/onebenthic_api_1/API-1_with_filters?",
              query = list(in_year = year, in_sieve_size_mm = sieve_size))
   community_data <- content(data, "text")%>%fromJSON
-  str(community_data)
+  glimpse(community_data)
 }

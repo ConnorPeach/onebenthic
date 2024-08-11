@@ -17,5 +17,5 @@ ob_nonnative_data <- function(year) {
   data = GET("https://rconnect.cefas.co.uk/onebenthic_api_7/API-7?",
              query = list(in_year = year))
   nonnative_data <- content(data, "text")%>%fromJSON
-  str(nonnative_data)
+  glimpse(nonnative_data)
 }

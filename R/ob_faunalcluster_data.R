@@ -16,5 +16,5 @@ ob_faunalcluster_data <- function(survey_name) {
   data = GET("https://rconnect.cefas.co.uk/onebenthic_api_5/API-5?",
              query = list(in_Survey_name = survey_name))
   faunalcluster_data <- content(data, "text")%>%fromJSON
-  str(faunalcluster_data)
+  glimpse(faunalcluster_data)
 }

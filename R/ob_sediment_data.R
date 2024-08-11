@@ -17,5 +17,5 @@ ob_sediment_data <- function(year) {
   data = GET("https://rconnect.cefas.co.uk/onebenthic_api_3/API-3?",
              query = list(in_year = year))
   sediment_data <- content(data, "text")%>%fromJSON
-  str(sediment_data)
+  glimpse(sediment_data)
 }

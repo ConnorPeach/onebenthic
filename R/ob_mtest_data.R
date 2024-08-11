@@ -16,5 +16,5 @@ ob_mtest_data <- function(survey_name) {
   data = GET("https://rconnect.cefas.co.uk/onebenthic_api_6/API-6?",
              query = list(in_surveyname = survey_name))
   mtest_data <- content(data, "text")%>%fromJSON
-  str(mtest_data)
+  glimpse(mtest_data)
 }

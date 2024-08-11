@@ -17,5 +17,5 @@ ob_macrofaunal_data <- function(year) {
   data = GET("https://rconnect.cefas.co.uk/onebenthic_api_4/API-4?",
              query = list(in_year = year))
   macrofaunal_data <- content(data, "text")%>%fromJSON
-  str(macrofaunal_data)
+  glimpse(macrofaunal_data)
 }

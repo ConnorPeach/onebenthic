@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(onebenthic)
+library(dplyr)
 ```
 
 ## An introduction to the onebenthic R package.
